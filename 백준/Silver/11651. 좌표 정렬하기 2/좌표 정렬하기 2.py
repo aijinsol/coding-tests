@@ -8,9 +8,9 @@ input = sys.stdin.readline
 N = int(input().rstrip())
 pts = list()
 for _ in range(N):
-    x, y = map(int, input().split())
+    x, y = map(int, input().rstrip().split())
     pts.append((x, y))
 pts_sorted = sorted(pts, key = lambda x : (x[1], x[0]))
 
-for idx in range(N):
-    print(pts_sorted[idx][0], pts_sorted[idx][1])
+for x, y in pts_sorted:
+    print(x, y)
