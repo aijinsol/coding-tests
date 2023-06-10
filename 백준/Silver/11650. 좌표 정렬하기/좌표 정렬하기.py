@@ -12,4 +12,5 @@ for _ in range(N):
 coordinates_sorted = sorted(coordinates, key = lambda x : (x[0], x[1]))
 
 for idx in range(N):
-    print(coordinates_sorted[idx][0], coordinates_sorted[idx][1])
+    x, y = coordinates_sorted[idx]
+    print(x, y)
