@@ -9,9 +9,9 @@ N = int(input().rstrip())
 members = list()
 
 for _ in range(N):
-    age, name = input().split()
+    age, name = input().rstrip().split()
     members.append((int(age), name))
 members_sorted = sorted(members, key = lambda x : x[0], reverse=False)
 
-for idx in range(N):
-    print(members_sorted[idx][0], members_sorted[idx][1])
+for age, name in members_sorted:
+    print(age, name)
