@@ -2,14 +2,14 @@
 - 230610
 '''
 import sys
-from collections import defaultdict
+
 
 input = sys.stdin.readline
 N = int(input().rstrip())
 numbers = list(map(int, input().rstrip().split()))
 
 sorted_numbers = sorted(numbers)
-numbers_idx = defaultdict(int)
+numbers_idx = dict()
 idx = 0
 for num in sorted_numbers:
     if num not in numbers_idx.keys():
