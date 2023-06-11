@@ -14,5 +14,6 @@ def tile_cnt(num):
         dp[i] = dp[i-1] + dp[i-2]
     return dp[num]
 
-n = int(input())
+input = sys.stdin.readline
+n = int(input().strip())
 print(tile_cnt(n) % 10007)
