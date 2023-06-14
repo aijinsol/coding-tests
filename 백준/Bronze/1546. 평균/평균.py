@@ -6,7 +6,7 @@ import sys
 
 def solution(N, scores):
     max_score = max(scores)
-    new_scores = map(lambda x: x/max_score*100, scores)
+    new_scores = map(lambda x: x / max_score * 100, scores)
     ans = float(sum(new_scores) / N)
     return ans
 
