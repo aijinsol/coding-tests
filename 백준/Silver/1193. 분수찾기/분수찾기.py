@@ -5,12 +5,12 @@ import sys
 
 
 def solution(num):
-    sum, row = 0, 0
+    add, row = 0, 0
     
     # 1) Find the row number
-    while sum < num:
+    while add < num:
         row += 1
-        sum += row
+        add += row
     
     # 2) Find the column number
     col = int(num - (row - 1) * row / 2)
