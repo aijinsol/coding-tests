@@ -8,7 +8,7 @@ queue = deque(range(1, N+1))
 result = []
 
 idx = 0
-while len(queue):
+while queue:
     idx += 1
     if idx % K != 0:
         queue.rotate(-1)
