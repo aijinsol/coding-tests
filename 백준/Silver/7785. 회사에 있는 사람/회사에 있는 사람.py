@@ -19,3 +19,24 @@ for name, log in employers.items():
 ans.sort(reverse=True)
 for name in ans:
     print(name)
+
+'''
+# Bruce    
+import sys
+
+
+input = sys.stdin.readline
+n = int(input().rstrip())
+
+working = set()
+for _ in range(n):
+    name, log = input().rstrip().split()
+    if log == "enter":
+        working.add(name)
+    else:
+        working.remove(name)
+        
+ans = sorted(working, reverse=True)
+for a in ans:
+    print(a)
+'''
