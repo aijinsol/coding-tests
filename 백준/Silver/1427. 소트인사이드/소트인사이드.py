@@ -5,5 +5,4 @@ import sys
 
 
 input = sys.stdin.readline
-ans = int(''.join(sorted(input(), reverse=True)))
-print(ans)
+print(*sorted(input(), reverse=1), sep='')
