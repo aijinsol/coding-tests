@@ -1,3 +1,6 @@
+'''Solved date
+- 230815
+'''
 def solution(board, moves):
     dolls = []
     res = 0
@@ -12,6 +15,26 @@ def solution(board, moves):
                     dolls.append(item)
                 board[idx][move-1] = 0
                 break
-            else:
-                continue
     return res
+
+
+# Bruce
+from typing import List
+
+
+def solution(board: List[List[int]], moves: List[int]) -> int:
+    N = len(board)
+    ans = 0
+    basket = []
+    for m in moves:
+        for idx in range(N):
+            n = board[idx][m-1]
+            if n != 0:
+                board[idx][m-1] = 0
+                if basket and basket[-1] == n:
+                    basket.pop()
+                    ans += 2
+                else:
+                    basket.append(n)
+                break
+    return ans
