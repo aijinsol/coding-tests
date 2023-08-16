@@ -1,0 +1,10 @@
+/* Solved date
+- 230816
+*/
+SELECT
+    FLAVOR
+FROM
+    FIRST_HALF
+ORDER BY
+    TOTAL_ORDER DESC
+    , SHIPMENT_ID ASC;
