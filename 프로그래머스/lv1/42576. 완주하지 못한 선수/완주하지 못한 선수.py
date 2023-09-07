@@ -1,5 +1,6 @@
 '''Solved date
 - 230617
+- 230907
 '''
 def solution(participant, completion):
     p_acc, c_acc = 0, 0
@@ -16,25 +17,25 @@ def solution(participant, completion):
     return ans
 
 
-# def solution(participant, completion):
-#     acc = 0
-#     hashmap = dict()
-#     for p in participant:
-#         hash_val = hash(p)
-#         hashmap[hash_val] = p
-#         acc += hash_val
-#     for c in completion:
-#         acc -= hash(c)
+def solution(participant, completion):
+    acc = 0
+    hashmap = dict()
+    for p in participant:
+        hash_val = hash(p)
+        hashmap[hash_val] = p
+        acc += hash_val
+    for c in completion:
+        acc -= hash(c)
         
-#     ans = hashmap[acc]
-#     return ans
+    ans = hashmap[acc]
+    return ans
 
 
-# from collections import Counter
+from collections import Counter
 
 
-# def solution(participant, completion):
-#     p = Counter(participant)
-#     c = Counter(completion)
-#     ans = list(p - c)[0]
-#     return ans
+def solution(participant, completion):
+    p = Counter(participant)
+    c = Counter(completion)
+    ans = list(p - c)[0]
+    return ans
