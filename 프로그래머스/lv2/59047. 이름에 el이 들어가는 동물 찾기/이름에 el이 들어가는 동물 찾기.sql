@@ -1,0 +1,11 @@
+/* Solved date
+- 230918
+*/
+SELECT
+    ANIMAL_ID
+    , NAME
+FROM ANIMAL_INS
+WHERE
+    (NAME LIKE '%el%')
+    AND (ANIMAL_TYPE = 'Dog')
+ORDER BY NAME;
