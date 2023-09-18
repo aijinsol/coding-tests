@@ -1,0 +1,5 @@
+/* Solved date
+- 230918
+*/
+SELECT DISTINCT COUNT(ANIMAL_ID) AS count
+FROM ANIMAL_INS
