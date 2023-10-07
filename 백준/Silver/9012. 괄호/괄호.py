@@ -27,3 +27,28 @@ def is_vps(ps: str) -> str:
 for _ in range(T):
     ps = input().rstrip()
     print(is_vps(ps))
+
+
+    
+    
+# Bruce
+'''
+import sys
+
+
+def chk_vps(ps: str):
+    stack = []
+    for c in ps:
+        if stack and stack[-1] == "(" and c == ")":
+            stack.pop()
+        else:
+            stack.append(c)
+    print("YES") if not stack else print("NO")
+
+
+input = sys.stdin.readline
+T = int(input().rstrip())
+for _ in range(T):
+    ps = input().rstrip()
+    chk_vps(ps)
+'''
