@@ -4,7 +4,7 @@
 import sys
 
 
-input = sys.stdin.readline
+# input = sys.stdin.readline
 board = [[1] * 15 for _ in range(5)]
 
 for row in range(5):
@@ -14,14 +14,8 @@ for row in range(5):
 
 new_board = list(map(list, zip(*board)))
 
-words = list()
+result = ''
 for letters in new_board:
-    word = ''
-    for idx in range(5):
-        if letters[idx] != 1:
-            word += letters[idx]
-    words.append(word)
+    result += ''.join(str(item) for item in letters if isinstance(item, str))
 
-ans = ''.join(words)
-
-print(ans)
+print(result)
