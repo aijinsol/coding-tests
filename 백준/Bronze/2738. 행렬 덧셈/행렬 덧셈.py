@@ -16,3 +16,10 @@ for i in range(len(matrix_a)):
         
 for row in matrix_a:
     print(*row)
+    
+'''
+result_matrix = [[matrix_a[i][j] + matrix_b[i][j] for j in range(len(matrix_a[0]))] for i in range(len(matrix_a))]
+        
+for row in result_matrix:
+    print(*row)
+'''
