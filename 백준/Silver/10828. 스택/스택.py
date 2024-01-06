@@ -1,22 +1,22 @@
-'''Solved date
-- 230703
+'''Date
+- 240104
 '''
 import sys
-
 
 input = sys.stdin.readline
 N = int(input().rstrip())
 
 stack = []
 for _ in range(N):
-    order = input().split()
-    if len(order) > 1:
-        stack.append(order[1])
-    elif order[0] == 'pop':
-        print(stack.pop()) if len(stack) else print(-1)
-    elif order[0] == 'size':
+    command = input().rstrip()
+    if command.startswith('push'):
+        command, X = command.split()
+        stack.append(int(X))
+    elif command == 'pop':
+        print(stack.pop()) if stack else print(-1)
+    elif command == 'size':
         print(len(stack))
-    elif order[0] == 'empty':
-        print(1) if len(stack) == 0 else print(0)
-    elif order[0] == 'top':
-        print(stack[-1]) if len(stack) else print(-1)
+    elif command == 'empty':
+        print(1) if not stack else print(0)
+    elif command == 'top':
+        print(stack[-1]) if stack else print(-1)
