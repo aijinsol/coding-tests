@@ -1,5 +1,6 @@
 '''Solved date
 - 240123
+- 240124
 '''
 def solution(brown, yellow):
     num_blocks = brown + yellow
@@ -15,17 +16,11 @@ def solution(brown, yellow):
         row, col = candidate
         if (row-2) * (col-2) == yellow:
             return [row, col]
-        
 
-def solution(brown, red):
-    for i in range(1, int(red**(1/2))+1):
-        if red % i == 0:
-            if 2*(i + red//i) == brown-4:
-                return [red//i+2, i+2]
-            
             
 def solution(brown, yellow):
     area = brown + yellow
-    for num in range(3, int(area ** 1/2) + 1):
-        if (area % num == 0) and 2 * (area // num + num - 2) == brown:
+    for num in range(3, int(area ** 1/2) + 1): # num: 세로 길이
+        # (넓이 % 세로 == 0) and 2 * (가로 + 세로) - 4 == 둘레
+        if (area % num == 0) and 2 * (area // num + num)- 4 == brown:
             return [area // num, num]
