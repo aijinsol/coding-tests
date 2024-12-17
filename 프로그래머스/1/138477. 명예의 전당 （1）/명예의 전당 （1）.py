@@ -3,6 +3,7 @@ def solution(k, score):
     winners = []
     for s in score:
         winners.append(s)
-        new_winners = sorted(winners)[-k:]
-        ans.append(new_winners[0])
+        if (len(winners) > k):
+            winners.remove(min(winners))
+        ans.append(min(winners))
     return ans
